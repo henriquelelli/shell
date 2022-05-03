@@ -45,8 +45,22 @@ style = "bg:#9f1212"
 format = '[[ $symbol $branch ](bg:#9F1212 black)]($style)'
 
 [git_status]
-symbol = " "
-style = "bg:e95151"
+conflicted = "⚔️ "
+ahead = "🏎️  💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️  💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️   ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️   ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️   ×${count}"
+style = "bright-white"
 format = '[[($all_status$ahead_behind )](bg:#9F1212 black)]($style)'
 
+
+#[git_status]
+#symbol = " "
+#style = "bg:e95151"
+#format = '[[($all_status$ahead_behind )](bg:#9F1212 black)]($style)'
 
